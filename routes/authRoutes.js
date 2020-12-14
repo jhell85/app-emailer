@@ -18,7 +18,7 @@ module.exports = (app) => {
   app.get("/api/current_user", (req, res) => {
     console.log(req.user);
     if (!req.user) {
-      res.send({ user: null });
+      res.send({ user: undefined });
     }
     res.send(req.user);
   });
