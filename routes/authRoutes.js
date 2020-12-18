@@ -18,7 +18,8 @@ module.exports = (app) => {
   app.get("/api/current_user", (req, res) => {
     console.log(req.user);
     if (!req.user) {
-      res.send({ user: undefined });
+      console.log("no user present");
+      res.send({ user: null });
     }
     res.send(req.user);
   });
