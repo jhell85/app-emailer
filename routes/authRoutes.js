@@ -16,7 +16,7 @@ module.exports = (app) => {
   });
 
   app.get("/api/current_user", (req, res) => {
-    console.log(req.user);
+    console.log("blah blah /api/current_user", req.user);
     if (!req.user) {
       console.log("no user present");
       res.send({ user: null });
